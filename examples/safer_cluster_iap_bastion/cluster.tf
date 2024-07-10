@@ -40,11 +40,20 @@ module "gke" {
   grant_registry_access = true
   node_pools = [
     {
-      name          = "safer-pool"
-      min_count     = 1
-      max_count     = 4
-      auto_upgrade  = true
-      node_metadata = "GKE_METADATA"
+      name           = "safer-pool"
+      min_count      = 1
+      max_count      = 1
+      auto_upgrade   = true
+      node_metadata  = "GKE_METADATA"
+      machine_type   = "e2-standard-2"
+      node_locations = "us-central1-a,us-central1-b,us-central1-c"
+      preemptible    = true
+      disk_type      = "pd-standard"
+      image_type     = "COS_CONTAINERD"
+      enable_gcfs    = false
+      enable_gvnic   = false
+      auto_repair    = true
+      auto_upgrade   = true
     }
   ]
 }
