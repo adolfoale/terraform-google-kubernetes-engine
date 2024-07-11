@@ -16,7 +16,7 @@
 
 locals {
   bastion_name = format("%s-bastion", var.cluster_name)
-  bastion_zone = format("%s-a", var.region)
+  bastion_zone = format("%s-b", var.region)
 }
 
 module "bastion" {
