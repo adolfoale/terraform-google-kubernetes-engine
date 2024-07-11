@@ -28,7 +28,7 @@ variable "cluster_name" {
 variable "region" {
   type        = string
   description = "The region to host the cluster in"
-  default     = "us-east1"
+  default     = "us-central1"
 
 }
 
