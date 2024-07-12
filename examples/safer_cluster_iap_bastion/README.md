@@ -34,6 +34,8 @@ To deploy this example:
    HTTPS_PROXY=localhost:8888 kubectl get pods --all-namespaces
    ```
 
+[Bastion configuration](https://cloud.google.com/kubernetes-engine/docs/tutorials/private-cluster-bastion?hl=es-419#gcloud)
+
  <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 ## Inputs
 
