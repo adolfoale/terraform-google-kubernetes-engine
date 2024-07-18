@@ -34,6 +34,12 @@ To deploy this example:
    HTTPS_PROXY=localhost:8888 kubectl get pods --all-namespaces
    ```
 
+## How to connect
+
+1. `gcloud container clusters get-credentials --project lateral-booking-429102-a9 --zone us-central1 --internal-ip safer-cluster-iap-bastion`
+2. `gcloud  compute ssh safer-cluster-iap-bastion-bastion --tunnel-through-iap --project lateral-booking-429102-a9 --zone us-central1-b --ssh-flag="-4 -L8888:127.0.0.1:8888 -N -q -f`
+3. `HTTPS_PROXY=localhost:8888 kubectl get ns`
+
 [Bastion configuration](https://cloud.google.com/kubernetes-engine/docs/tutorials/private-cluster-bastion?hl=es-419#gcloud)
 
  <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
